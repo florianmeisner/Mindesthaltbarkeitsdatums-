@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Druck-Simulation – Inkjet</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="layout">
+
+  <!-- Linke Spalte: H1 + Regler + Reset -->
+  <div id="controls">
+    <h1>MHD</h1>
+
+    <div class="control">
+      <label>Lines</label>
+      <input type="range" id="nozzleCountSlider" min="10" max="150" value="40">
+      <span id="nozzleCountValue">40</span>
+    </div>
+
+    <div class="control">
+      <label>Nozzles</label>
+      <input type="range" id="nozzleSpacingSlider" min="1" max="10" value="2">
+      <span id="nozzleSpacingValue">2</span>
+    </div>
+
+    <div class="control">
+      <label>Blur</label>
+      <input type="range" id="jitterStrengthSlider" min="0" max="2" step="0.05" value="0.4">
+      <span id="jitterStrengthValue">0.4</span>
+    </div>
+
+    <!-- Reset Button -->
+    <button id="resetButton">Canvas zurücksetzen</button>
+
+    <!-- Export Button -->
+    <button id="exportButton">Als PNG speichern</button>
+
+  </div>
+
+  <!-- Rechte Spalte: Canvas -->
+  <div id="canvas-container"></div>
+
+</div>
+
+<script src="sketch.js"></script>
+</body>
+</html>

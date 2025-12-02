@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: white;
+}
+
+#layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Linke Spalte */
+#controls {
+  width: 280px;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+#controls h1 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: normal;
+  padding: 1px;
+}
+
+.control {
+  background: #fff;
+  padding: 1px;
+  border-radius: 1px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control input[type=range] {
+  flex: 2;
+  margin: 0 10px;
+}
+
+#resetButton {
+  padding: 5px;
+  border-radius: 1px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+#exportButton {
+  padding: 5px;
+  border-radius: 1px;
+  background: black;
+  border: 1px solid black;
+  color: white;
+}
+
+/* Rechte Spalte */
+#canvas-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: red;
+}
+
+canvas {
+  border: 1px solid white;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Minimalistische Industrials-Style Slider ---- */
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  height: 20px; /* Abstand damit der Kreis gut klickbar ist */
+  cursor: pointer;
+}
+
+/* Die feine schwarze Linie */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: black;
+}
+
+input[type=range]::-moz-range-track {
+  height: 2px;
+  background: black;
+}
+
+input[type=range]::-ms-track {
+  height: 2px;
+  background: transparent;
+  border-color: transparent;
+  border-width: 6px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: black;
+}
+
+/* Der schwarze Punkt als Griff */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: black;
+  border-radius: 50%;
+  margin-top: -5px; /* Damit der Punkt mittig auf der Linie sitzt */
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  height: 12px;
+  width: 12px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
